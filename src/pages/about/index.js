@@ -9,8 +9,11 @@ import {
   skills,
   services,
 } from "../../content_option";
+import { useTranslation } from 'react-i18next';
 
 export const About = () => {
+  const { i18n } = useTranslation();
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -21,7 +24,7 @@ export const About = () => {
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
-            <h1 className="display-4 mb-4">About me</h1>
+            <h1 className="display-4 mb-4">{i18n.t('about_me')}</h1>
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
@@ -31,13 +34,13 @@ export const About = () => {
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <div>
-              <p>{dataabout.aboutme}</p>
+              <p>{dataabout.aboutme[i18n.language]}</p>
             </div>
           </Col>
         </Row>
         <Row className=" sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Work Timline</h3>
+            <h3 className="color_sec py-4">{i18n.t('work_timeline')}</h3>
           </Col>
           <Col lg="7">
             <table className="table caption-top">
@@ -57,7 +60,7 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Skills</h3>
+            <h3 className="color_sec py-4">{i18n.t('skills')}</h3>
           </Col>
           <Col lg="7">
             {skills.map((data, i) => {
@@ -81,7 +84,7 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
+            <h3 className="color_sec py-4">{i18n.t('services')}</h3>
           </Col>
           <Col lg="7">
             {services.map((data, i) => {

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 export const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   return (
     <HelmetProvider>
@@ -40,7 +40,7 @@ export const Home = () => {
                     }}
                   />
                 </h1>
-                <p className="mb-1x">{t(introdata.description)}</p>
+                <p className="mb-1x">{introdata.description[i18n.language]}</p>
                 <div className="intro_btn-action pb-5">
                   <Link to="/portfolio" className="text_2">
                     <div id="button_p" className="ac_btn btn ">

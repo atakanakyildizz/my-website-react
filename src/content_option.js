@@ -18,13 +18,21 @@ const introdata = {
         second: "develop_systems",
         third: "work_space",
     },
-    description: "intro_description",
+    description: {
+        tr: "Merhaba, ben Atakan Akyıldız.\n\nPolitecnico di Torino'da Elektrik-Elektronik Mühendisliği öğrencisiyim.\n\nYazılım, yönetim ve elektronik alanlarında kendimi geliştiriyor, özellikle yapay zeka teknolojilerine ilgi duyuyorum.\n\nSektör profesyonelleriyle çalışarak deneyim kazanıyor ve kariyerimi şekillendiriyorum.\n\nYeni gelişmelere ve iş birliklerine her zaman açığım.",
+        en: "Hello, I'm Atakan Akyıldız.\n\nI'm an Electrical-Electronic Engineering student at Politecnico di Torino.\n\nI'm developing myself in software, management, and electronics, with a particular interest in AI technologies.\n\nI'm gaining experience by working with industry professionals and shaping my career.\n\nI'm always open to new developments and collaborations.",
+        it: "Ciao, sono Atakan Akyıldız.\n\nSono uno studente di Ingegneria Elettrica ed Elettronica al Politecnico di Torino.\n\nMi sto sviluppando nel software, nella gestione e nell'elettronica, con particolare interesse per le tecnologie AI.\n\nSto acquisendo esperienza lavorando con professionisti del settore e plasmando la mia carriera.\n\nSono sempre aperto a nuovi sviluppi e collaborazioni."
+    },
     your_img_url: profileImg,
 };
 
 const dataabout = {
     title: "About Me",
-    aboutme: "I am a dual-degree engineering student with a focus on electronics and communication systems. My academic journey spans across two prestigious institutions, complemented by hands-on experience in mechatronics and space technology projects. I am particularly interested in the intersection of software development and electronic systems.",
+    aboutme: {
+        en: "Hello, I'm Atakan Akyıldız, a university student studying software engineering, management, and electronic engineering. Although my experience is still limited, I have a deep interest in artificial intelligence and related technologies, and I am determined to develop myself in this field. By collaborating with industry professionals, I work on fundamental solutions and practical projects. I aim to specialize in artificial intelligence by shaping my career through these experiences and opportunities. I'm here to learn about new developments and industry trends. I'm always open to making connections and creating collaboration opportunities, to continue growing and developing together!",
+        tr: "Merhaba, ben Atakan Akyıldız, yazılım mühendisliği, yönetim ve elektronik mühendisliği alanlarında eğitim gören bir üniversite öğrencisiyim. Deneyimim henüz sınırlı olsa da, yapay zeka ve ilgili teknolojiler konusunda derin bir ilgiye sahibim ve kendimi bu alanda geliştirmeye kararlıyım. Sektör profesyonelleriyle iş birliği yaparak, temel çözümler ve pratik projeler üzerinde çalışıyorum. Kariyerimi, bu deneyimler ve fırsatlar üzerinden şekillendirerek, yapay zeka alanında uzmanlaşmayı hedefliyorum. Yeni gelişmeler ve sektör trendleri hakkında bilgi edinmek için buradayım. Bağlantılar kurmaya ve iş birliği fırsatları yaratmaya her zaman açığım, birlikte büyümeye ve gelişmeye devam etmek için!",
+        it: "Ciao, sono Atakan Akyıldız, uno studente universitario che studia ingegneria del software, gestione e ingegneria elettronica. Sebbene la mia esperienza sia ancora limitata, ho un profondo interesse per l'intelligenza artificiale e le tecnologie correlate, e sono determinato a svilupparmi in questo campo. Collaborando con professionisti del settore, lavoro su soluzioni fondamentali e progetti pratici. Miro a specializzarmi nell'intelligenza artificiale plasmando la mia carriera attraverso queste esperienze e opportunità. Sono qui per conoscere i nuovi sviluppi e le tendenze del settore. Sono sempre aperto a stabilire connessioni e creare opportunità di collaborazione, per continuare a crescere e svilupparsi insieme!"
+    }
 };
 
 const worktimeline = [{

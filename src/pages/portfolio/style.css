@@ -159,3 +159,42 @@
 .modal-header .close {
     color: var(--text-color);
 }
+
+@media screen and (max-width: 768px) {
+    .po_items_ho {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .po_item {
+        aspect-ratio: auto;
+    }
+
+    .po_item .content {
+        position: static;
+        transform: none;
+        opacity: 1;
+        background: none;
+        border: none;
+        padding: 10px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .po_item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .po_item .content .project-title {
+        color: var(--text-color);
+        margin: 10px 0;
+    }
+
+    .po_item:hover .content .project-title {
+        color: var(--text-color);
+    }
+
+    .view-project-btn {
+        display: none;
+    }
+}

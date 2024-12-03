@@ -245,3 +245,15 @@ section {
 .intro_sec .h_bg-image {
     filter: saturate(0.5);
 }
+
+.intro p {
+    white-space: pre-wrap;
+    word-wrap: normal !important;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    max-width: 100%;
+}

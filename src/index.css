@@ -94,3 +94,13 @@ code {
 .color_sec {
     color: var(--secondary-color);
 }
+
+* {
+  word-wrap: normal !important;
+  overflow-wrap: normal !important;
+  word-break: keep-all !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+}

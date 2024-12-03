@@ -70,6 +70,17 @@
     padding-bottom: 4px;
 }
 
+.About-header p {
+    white-space: pre-wrap;
+    word-wrap: normal !important;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    max-width: 100%;
+}
 
 /*! CSS Used keyframes */
 
