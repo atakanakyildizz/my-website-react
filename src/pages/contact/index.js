@@ -4,9 +4,12 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
+import { contactConfig, socialprofils } from "../../content_option";
+import { useTranslation } from 'react-i18next';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 export const ContactUs = () => {
+  const { t } = useTranslation();
   const [formData, setFormdata] = useState({
     email: "",
     name: "",
@@ -19,7 +22,7 @@ export const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormdata({ loading: true });
+    setFormdata({ ...formData, loading: true });
 
     const templateParams = {
       from_name: formData.email,
@@ -37,22 +40,26 @@ export const ContactUs = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setFormdata({
+            ...formData,
             loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
+            alertmessage: t('success_message'),
             variant: "success",
             show: true,
+            name: "",
+            email: "",
+            message: "",
           });
         },
         (error) => {
-          console.log(error.text);
+          console.error("EmailJS Error:", error);
           setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
+            ...formData,
+            alertmessage: `${t('error_message')} (${error.text})`,
             variant: "danger",
             show: true,
+            loading: false,
           });
-          document.getElementsByClassName("co_alert")[0].scrollIntoView();
         }
       );
   };
@@ -69,12 +76,12 @@ export const ContactUs = () => {
       <Container>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
+          <title>{meta.title} | {t('contact')}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
-            <h1 className="display-4 mb-4">Contact Me</h1>
+            <h1 className="display-4 mb-4">{t('contact')}</h1>
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
@@ -93,9 +100,9 @@ export const ContactUs = () => {
             </Alert>
           </Col>
           <Col lg="5" className="mb-5">
-            <h3 className="color_sec py-4">Get in touch</h3>
+            <h3 className="color_sec py-4">{t('get_in_touch')}</h3>
             <address>
-              <strong>Email:</strong>{" "}
+              <strong>{t('email')}:</strong>{" "}
               <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
                 {contactConfig.YOUR_EMAIL}
               </a>
@@ -103,12 +110,23 @@ export const ContactUs = () => {
               <br />
               {contactConfig.hasOwnProperty("YOUR_FONE") ? (
                 <p>
-                  <strong>Phone:</strong> {contactConfig.YOUR_FONE}
+                  <strong>{t('phone')}:</strong> {contactConfig.YOUR_FONE}
                 </p>
               ) : (
                 ""
               )}
             </address>
+            <div className="social-links mt-4">
+              <a href={socialprofils.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">
+                <FaLinkedin className="social-icon" /> LinkedIn
+              </a>
+              <a href={socialprofils.github} target="_blank" rel="noopener noreferrer" className="social-link">
+                <FaGithub className="social-icon" /> Github
+              </a>
+              <a href={socialprofils.instagram} target="_blank" rel="noopener noreferrer" className="social-link">
+                <FaInstagram className="social-icon" /> Instagram
+              </a>
+            </div>
             <p>{contactConfig.description}</p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
@@ -119,7 +137,7 @@ export const ContactUs = () => {
                     className="form-control"
                     id="name"
                     name="name"
-                    placeholder="Name"
+                    placeholder={t('name')}
                     value={formData.name || ""}
                     type="text"
                     required
@@ -131,7 +149,7 @@ export const ContactUs = () => {
                     className="form-control rounded-0"
                     id="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder={t('email')}
                     type="email"
                     value={formData.email || ""}
                     required
@@ -143,7 +161,7 @@ export const ContactUs = () => {
                 className="form-control rounded-0"
                 id="message"
                 name="message"
-                placeholder="Message"
+                placeholder={t('message')}
                 rows="5"
                 value={formData.message}
                 onChange={handleChange}
@@ -153,7 +171,7 @@ export const ContactUs = () => {
               <Row>
                 <Col lg="12" className="form-group">
                   <button className="btn ac_btn" type="submit">
-                    {formData.loading ? "Sending..." : "Send"}
+                    {formData.loading ? t('sending') : t('send')}
                   </button>
                 </Col>
               </Row>

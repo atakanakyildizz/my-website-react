@@ -1,157 +1,294 @@
+// Import images
+import astraImg from "./assets/images/astra.jpeg";
+import politorbitalImg from "./assets/images/politorbital.jpeg";
+import gyotaImg from "./assets/images/gyota.jpeg";
+import profileImg from "./assets/images/photo_portfolio.JPG";
+import lifeguardImg from "./assets/images/lifeguard.jpg";
+
 const logotext = "Atakan";
 const meta = {
     title: "Atakan Akyildiz",
-    description: "I’m Atakan Akyildiz data scientist _ Full stack devloper ,currently student in Torino Italy",
+    description: "I'm Atakan Akyildiz, an Electrical and Electronics Engineering student at Politecnico Di Torino and Communication and Electronics Engineering student at Eskişehir Osmangazi University",
 };
 
 const introdata = {
-    title: "I’m Atakan Akyildiz",
+    title: "I'm Atakan Akyildiz",
     animated: {
-        first: "I love coding",
-        second: "I code cool websites",
-        third: "I develop mobile apps",
+        first: "love_coding",
+        second: "develop_systems",
+        third: "work_space",
     },
-    description: "Hello, I am Atakan Akyıldız, a university student focusing on software development and data analytics. Although I lack experience, I am driven by a strong desire to learn and improve. I develop my elaboration with industry professionals for basic solutions and guidance on practical projects. My goal is to structure my career path through these experiences and opportunities. I'm here to stay informed about new disruptions and industry trends. I welcome connections and opportunities for collaboration as we continue to grow and endure!",
-    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
+    description: "intro_description",
+    your_img_url: profileImg,
 };
 
 const dataabout = {
-    title: "abit about my self",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+    title: "About Me",
+    aboutme: "I am a dual-degree engineering student with a focus on electronics and communication systems. My academic journey spans across two prestigious institutions, complemented by hands-on experience in mechatronics and space technology projects. I am particularly interested in the intersection of software development and electronic systems.",
 };
+
 const worktimeline = [{
-        jobtitle: "Designer of week",
-        where: "YAdfi",
+        jobtitle: "Mechatronics Team Member - ASTRA",
+        where: "Torino, Italy",
+        date: "2023 - Present",
+    },
+    {
+        jobtitle: "Communication Team Member - PoliTOrbital",
+        where: "Torino, Italy",
+        date: "2023 - Present",
+    },
+    {
+        jobtitle: "Team Captain - G-YOTA",
+        where: "Eskişehir, Turkey",
+        date: "2021",
+    },
+    {
+        jobtitle: "Lifeguard - SUNSET POOLS",
+        where: "Baltimore, USA",
         date: "2020",
-    },
-    {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
-    },
-    {
-        jobtitle: "Designer of week",
-        where: "ALquds",
-        date: "2019",
     },
 ];
 
 const skills = [{
         name: "Python",
-        value: 90,
-    },
-    {
-        name: "Djano",
         value: 85,
     },
     {
-        name: "Javascript",
+        name: "C",
         value: 80,
     },
     {
         name: "React",
-        value: 60,
+        value: 75,
     },
     {
-        name: "Jquery",
-        value: 85,
+        name: "React Native",
+        value: 75,
+    },
+    {
+        name: "AutoCAD",
+        value: 70,
     },
 ];
 
 const services = [{
-        title: "UI & UX Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+        title: "Electronic Systems Development",
+        description: "Experience in developing electronic components for rover projects and space technology applications.",
     },
     {
-        title: "Mobile Apps",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+        title: "Software Development",
+        description: "Proficient in multiple programming languages including Python, C, and React frameworks.",
     },
     {
-        title: "Wordpress Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+        title: "Team Leadership",
+        description: "Proven leadership experience as team captain in technology competitions and collaborative projects.",
     },
 ];
 
 const dataportfolio = [{
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        img: astraImg,
+        description: "astra_description",
+        title: "ASTRA - Advanced Space Technologies and Research Alliance",
+        details: {
+            en: {
+                title: "ASTRA - Advanced Space Technologies and Research Alliance",
+                role: "Mechatronics Team Member",
+                duration: "September 2023 - May 2024 (9 months)",
+                location: "Turin, Piedmont, Italy · On-site",
+                description: "ASTRA is a student team at Politecnico di Torino dedicated to space exploration and research. The team's inaugural project involves the construction of a spherical rover named Scout. This lunar exploration vehicle is designed to operate in the Moon's low-gravity vacuum environment. The spherical architecture provides multiple advantages: elimination of overturning risks during motion, omnidirectional movement capability, and potential for cooperative rover groupings to handle bulky loads. The project combines innovative design with practical space exploration solutions.",
+                responsibilities: [
+                    "Development of mechatronic systems for the Scout lunar rover",
+                    "Design and implementation of motion control systems",
+                    "Integration of sensors and actuators for rover operation",
+                    "Collaboration on spherical architecture implementation",
+                    "Testing and validation of rover mechanisms"
+                ]
+            },
+            tr: {
+                title: "ASTRA - Gelişmiş Uzay Teknolojileri ve Araştırma Birliği",
+                role: "Mekatronik Takım Üyesi",
+                duration: "Eylül 2023 - Mayıs 2024 (9 ay)",
+                location: "Torino, Piyemonte, İtalya · Yerinde",
+                description: "ASTRA, Politecnico di Torino'da uzay keşfi ve araştırmaya adanmış bir öğrenci takımıdır. Takımın ilk projesi Scout adlı küresel bir gezginin yapımını içermektedir. Bu ay keşif aracı, Ay'ın düşük yerçekimli vakum ortamında çalışmak üzere tasarlanmıştır. Küresel mimari birçok avantaj sağlar: hareket sırasında devrilme riskinin ortadan kaldırılması, çok yönlü hareket kabiliyeti ve hacimli yükleri taşımak için işbirlikçi gezgin gruplarının oluşturulabilmesi. Proje, yenilikçi tasarımı pratik uzay keşif çözümleriyle birleştirmektedir.",
+                responsibilities: [
+                    "Scout ay gezgini için mekatronik sistemlerin geliştirilmesi",
+                    "Hareket kontrol sistemlerinin tasarımı ve uygulaması",
+                    "Gezgin operasyonu için sensör ve aktüatörlerin entegrasyonu",
+                    "Küresel mimari uygulamasında işbirliği",
+                    "Gezgin mekanizmalarının test edilmesi ve doğrulanması"
+                ]
+            },
+            it: {
+                title: "ASTRA - Alleanza per le Tecnologie e la Ricerca Spaziale Avanzata",
+                role: "Membro del Team Meccatronico",
+                duration: "Settembre 2023 - Maggio 2024 (9 mesi)",
+                location: "Torino, Piemonte, Italia · In sede",
+                description: "ASTRA è un team studentesco del Politecnico di Torino dedicato all'esplorazione e alla ricerca spaziale. Il progetto inaugurale del team prevede la costruzione di un rover sferico chiamato Scout. Questo veicolo di esplorazione lunare è progettato per operare nell'ambiente a bassa gravità e vuoto della Luna. L'architettura sferica offre molteplici vantaggi: eliminazione dei rischi di ribaltamento durante il movimento, capacità di movimento omnidirezionale e potenziale per il raggruppamento cooperativo di rover per gestire carichi voluminosi. Il progetto combina design innovativo con soluzioni pratiche per l'esplorazione spaziale.",
+                responsibilities: [
+                    "Sviluppo di sistemi meccatronici per il rover lunare Scout",
+                    "Progettazione e implementazione di sistemi di controllo del movimento",
+                    "Integrazione di sensori e attuatori per il funzionamento del rover",
+                    "Collaborazione nell'implementazione dell'architettura sferica",
+                    "Test e validazione dei meccanismi del rover"
+                ]
+            }
+        }
     },
     {
-        img: "https://picsum.photos/400/800/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        img: politorbitalImg,
+        description: "politorbital_description",
+        title: "PoliTOrbital - Space Research",
+        details: {
+            en: {
+                title: "PoliTOrbital - Space Research",
+                role: "Communication And Promotion Team Member",
+                duration: "September 2023 - July 2024 (11 months)",
+                location: "Turin, Piedmont, Italy · On-site",
+                description: "The objective of this project was the preliminary design of a reusable propulsion system for green suborbital flights participating in the Student Aerospace Challenge 2023. The team focused on designing a propulsion system that could be both reusable and, most importantly, environmentally sustainable and innovative. This was achieved by utilizing a combination of air-breathing engines and electric pump-fed rocket engines to reach the limits of the atmosphere.",
+                responsibilities: [
+                    "Design of environmentally sustainable propulsion systems",
+                    "Team communication and promotion coordination",
+                    "Project documentation and presentation",
+                    "Participation in Student Aerospace Challenge 2023"
+                ]
+            },
+            tr: {
+                title: "PoliTOrbital - Uzay Araştırması",
+                role: "İletişim ve Tanıtım Takım Üyesi",
+                duration: "Eylül 2023 - Temmuz 2024 (11 ay)",
+                location: "Torino, Piyemonte, İtalya · Yerinde",
+                description: "Bu projenin amacı, Student Aerospace Challenge 2023'e katılan yeşil yörünge-altı uçuşlar için yeniden kullanılabilir bir itki sistemi ön tasarımıydı. Takım, hem yeniden kullanılabilir hem de en önemlisi çevre dostu ve yenilikçi olabilecek bir itki sistemi tasarlamaya odaklandı. Bu, atmosferin sınırlarına ulaşmak için hava soluyan motorlar ve elektrik pompalı roket motorlarının bir kombinasyonu kullanılarak başarıldı.",
+                responsibilities: [
+                    "Çevre dostu itki sistemleri tasarımı",
+                    "Takım iletişimi ve tanıtım koordinasyonu",
+                    "Proje dokümantasyonu ve sunumu",
+                    "Student Aerospace Challenge 2023'e katılım"
+                ]
+            },
+            it: {
+                title: "PoliTOrbital - Ricerca Spaziale",
+                role: "Membro del Team Comunicazione e Promozione",
+                duration: "Settembre 2023 - Luglio 2024 (11 mesi)",
+                location: "Torino, Piemonte, Italia · In sede",
+                description: "L'obiettivo di questo progetto era la progettazione preliminare di un sistema di propulsione riutilizzabile per voli suborbitali verdi partecipando allo Student Aerospace Challenge 2023. Il team si è concentrato sulla progettazione di un sistema di propulsione che potesse essere sia riutilizzabile che, soprattutto, sostenibile dal punto di vista ambientale e innovativo. Questo è stato ottenuto utilizzando una combinazione di motori air-breathing e motori a razzo alimentati da pompe elettriche per raggiungere i limiti dell'atmosfera.",
+                responsibilities: [
+                    "Progettazione di sistemi di propulsione ecosostenibili",
+                    "Coordinamento della comunicazione e promozione del team",
+                    "Documentazione e presentazione del progetto",
+                    "Partecipazione allo Student Aerospace Challenge 2023"
+                ]
+            }
+        }
     },
     {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        img: gyotaImg,
+        description: "gyota_description",
+        title: "G-YOTA - Unmanned Ground Vehicle",
+        details: {
+            en: {
+                title: "G-YOTA - Unmanned Ground Vehicle",
+                role: "Team Captain & Image Processing Lead",
+                duration: "February 2021 - August 2021",
+                location: "Eskişehir, Turkey",
+                description: "Led team to finals in Teknofest 2021 Agriculture category, focusing on image processing for autonomous navigation.",
+                responsibilities: [
+                    "Team leadership and project management",
+                    "Image processing system development",
+                    "Competition documentation preparation"
+                ]
+            },
+            tr: {
+                title: "G-YOTA - İnsansız Kara Aracı",
+                role: "Takım Kaptanı & Görüntü İşleme Sorumlusu",
+                duration: "Şubat 2021 - Ağustos 2021",
+                location: "Eskişehir, Türkiye",
+                description: "Teknofest 2021 Tarım kategorisinde takımı finale taşıma, otonom navigasyon için görüntü işleme üzerine odaklanma.",
+                responsibilities: [
+                    "Takım liderliği ve proje yönetimi",
+                    "Görüntü işleme sistemi geliştirme",
+                    "Yarışma dokümantasyonu hazırlama"
+                ]
+            },
+            it: {
+                title: "G-YOTA - Veicolo Terrestre Senza Pilota",
+                role: "Capitano del Team & Responsabile Elaborazione Immagini",
+                duration: "Febbraio 2021 - Agosto 2021",
+                location: "Eskişehir, Turchia",
+                description: "Ho guidato il team alle finali nella categoria Agricoltura di Teknofest 2021, concentrandomi sull'elaborazione delle immagini per la navigazione autonoma.",
+                responsibilities: [
+                    "Leadership del team e gestione del progetto",
+                    "Sviluppo del sistema di elaborazione delle immagini",
+                    "Preparazione della documentazione per la competizione"
+                ]
+            }
+        }
     },
     {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-
-    {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/550/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
+        img: lifeguardImg,
+        description: "lifeguard_description",
+        title: "Sunset Pools - Lifeguard Experience",
+        details: {
+            en: {
+                title: "Sunset Pools - Lifeguard Experience",
+                role: "Lifeguard",
+                duration: "June 2020 - September 2020 (4 months)",
+                location: "Baltimore, Maryland, United States · On-site",
+                description: "Worked as a lifeguard at Sunset Pools within the scope of the Work and Travel program. This experience provided valuable opportunities for problem-solving, emergency response, and international work experience in the United States.",
+                responsibilities: [
+                    "Ensuring pool safety and preventing accidents",
+                    "Monitoring swimming activities and enforcing safety rules",
+                    "Performing emergency response when needed",
+                    "Maintaining pool area cleanliness and safety standards",
+                    "Participating in regular training and safety drills"
+                ]
+            },
+            tr: {
+                title: "Sunset Pools - Cankurtaran Deneyimi",
+                role: "Cankurtaran",
+                duration: "Haziran 2020 - Eylül 2020 (4 ay)",
+                location: "Baltimore, Maryland, Amerika Birleşik Devletleri · Yerinde",
+                description: "Work and Travel programı kapsamında Sunset Pools'da cankurtaran olarak çalıştım. Bu deneyim, problem çözme, acil durum müdahalesi ve Amerika Birleşik Devletleri'nde uluslararası iş deneyimi için değerli fırsatlar sağladı.",
+                responsibilities: [
+                    "Havuz güvenliğini sağlama ve kazaları önleme",
+                    "Yüzme aktivitelerini izleme ve güvenlik kurallarını uygulama",
+                    "Gerektiğinde acil durum müdahalesi yapma",
+                    "Havuz alanı temizliği ve güvenlik standartlarını koruma",
+                    "Düzenli eğitim ve güvenlik tatbikatlarına katılma"
+                ]
+            },
+            it: {
+                title: "Sunset Pools - Esperienza da Bagnino",
+                role: "Bagnino",
+                duration: "Giugno 2020 - Settembre 2020 (4 mesi)",
+                location: "Baltimore, Maryland, Stati Uniti · In sede",
+                description: "Ho lavorato come bagnino presso Sunset Pools nell'ambito del programma Work and Travel. Questa esperienza ha fornito preziose opportunità di problem solving, risposta alle emergenze ed esperienza lavorativa internazionale negli Stati Uniti.",
+                responsibilities: [
+                    "Garantire la sicurezza della piscina e prevenire incidenti",
+                    "Monitorare le attività di nuoto e far rispettare le regole di sicurezza",
+                    "Eseguire interventi di emergenza quando necessario",
+                    "Mantenere la pulizia dell'area piscina e gli standard di sicurezza",
+                    "Partecipare a formazione regolare ed esercitazioni di sicurezza"
+                ]
+            }
+        }
+    }
 ];
 
 const contactConfig = {
     YOUR_EMAIL: "atakanakyildiz0@gmail.com",
     YOUR_FONE: "+39 327 757 2749",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
-    // creat an emailjs.com account 
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    description: "",
+    YOUR_SERVICE_ID: "service_qy0itnq",
+    YOUR_TEMPLATE_ID: "template_46d3zuw",
+    YOUR_USER_ID: "3GJ8d1Rm_bZPsMZDj",
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/atakanakyildizz",
+    linkedin: "https://www.linkedin.com/in/atakan-akyildiz/",
+    instagram: "https://www.instagram.com/atakanakyldiz/",
 };
+
 export {
     meta,
     dataabout,

@@ -92,10 +92,23 @@ section {
 }
 
 .intro_sec .h_bg-image {
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    min-height: 700px;
+    background-repeat: no-repeat;
+    min-height: 800px;
     position: relative;
+    width: 1000px;
+    margin: auto;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+@media (max-width:991.98px) {
+    .intro_sec .h_bg-image {
+        width: 300px;
+        min-height: 300px;
+        margin: 30px auto;
+    }
 }
 
 .ac_btn {

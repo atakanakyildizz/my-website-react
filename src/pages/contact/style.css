@@ -43,3 +43,31 @@ button.btn.ac_btn:hover {
         transform: translateX(100%);
     }
 }
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-icon {
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    text-decoration: none;
+}
